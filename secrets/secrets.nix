@@ -13,20 +13,41 @@ let
   all = servers ++ [ x2100 ];
 in
 {
-  "deluge-webui-password.age".publicKeys = [ lisa ];
-  "keycloak-db.age".publicKeys = [ core-security ];
+  "deluge-webui-password.age".publicKeys = [
+    lisa
+    tower
+  ];
+  "keycloak-db.age".publicKeys = [
+    core-security
+    tower
+  ];
   "github-oauth-secret.age".publicKeys = [ tower ];
   "github-webhook-secret.age".publicKeys = [ tower ];
   "github-token-secret.age".publicKeys = [ tower ];
   "buildbot-nix-worker-password.age".publicKeys = [ tower ];
   "buildbot-nix-workers.age".publicKeys = [ tower ];
-  "ssh-lisa-pub.age".publicKeys = [ lisa ];
-  "ssh-lisa-priv.age".publicKeys = [ lisa ];
+  "ssh-lisa-pub.age".publicKeys = [
+    lisa
+    tower
+  ];
+  "ssh-lisa-priv.age".publicKeys = [
+    lisa
+    tower
+  ];
   "git-gpg-private-key.age".publicKeys = servers ++ [ x2100 ];
   "user-julien-password.age".publicKeys = all;
   "user-root-password.age".publicKeys = all;
   "ens-mail-password.age".publicKeys = servers ++ [ x2100 ];
-  "julien-malka-sh-mail-password.age".publicKeys = [ lisa ];
-  "malka-ens-school-mail-password.age".publicKeys = [ lisa ];
-  "mondon-ens-school-mail-password.age".publicKeys = [ lisa ];
+  "julien-malka-sh-mail-password.age".publicKeys = [
+    lisa
+    tower
+  ];
+  "malka-ens-school-mail-password.age".publicKeys = [
+    lisa
+    tower
+  ];
+  "mondon-ens-school-mail-password.age".publicKeys = [
+    lisa
+    tower
+  ];
 }
