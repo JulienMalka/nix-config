@@ -4,13 +4,17 @@ let
   lisa = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIO4kSscukEEoW/QiLgyZQluhsYK4wF+lFphlCakKYC2q";
   core-security = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICLnOINGYOFb+bLUUTV9sjwi2qbpwcaQlmGmWfy1PeGR";
   x2100 = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIG/zyse3NaSi9nxMSZ9ICYe4MMjUka+DewJ5M5N8cCBy";
+  fischer = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPeKDFxgdZlhNXEUx8ex0Fj2Re+tDBvUr52SS4Wh3V9n";
   servers = [
     gustave
     tower
     lisa
     core-security
   ];
-  all = servers ++ [ x2100 ];
+  all = servers ++ [
+    x2100
+    fischer
+  ];
 in
 {
   "deluge-webui-password.age".publicKeys = [
@@ -34,10 +38,16 @@ in
     lisa
     tower
   ];
-  "git-gpg-private-key.age".publicKeys = servers ++ [ x2100 ];
+  "git-gpg-private-key.age".publicKeys = servers ++ [
+    x2100
+    fischer
+  ];
   "user-julien-password.age".publicKeys = all;
   "user-root-password.age".publicKeys = all;
-  "ens-mail-password.age".publicKeys = servers ++ [ x2100 ];
+  "ens-mail-password.age".publicKeys = servers ++ [
+    x2100
+    fischer
+  ];
   "julien-malka-sh-mail-password.age".publicKeys = [
     lisa
     tower
