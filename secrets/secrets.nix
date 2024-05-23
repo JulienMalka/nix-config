@@ -20,7 +20,7 @@ let
 in
 {
   "deluge-webui-password.age".publicKeys = [
-    lisa
+    gustave
     tower
   ];
   "keycloak-db.age".publicKeys = [
