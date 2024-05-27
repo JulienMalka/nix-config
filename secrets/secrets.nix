@@ -7,6 +7,7 @@ let
   fischer = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPeKDFxgdZlhNXEUx8ex0Fj2Re+tDBvUr52SS4Wh3V9n";
   core-data = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPAcIdJ3gr17bvDZ8NAcDBkEmOPTEhpg2yq3p1NNQB0f";
   lambda = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKluGTi+vGRLU2emYBhTJuEy7Qw0xq1e0Ey7wvU9xYHz";
+  nuage = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEtPoZXJKPfSPGYb/H9eWL0tNSpAKM6V/AgeE1Uf2Is6";
   servers = [
     gustave
     tower
@@ -14,6 +15,7 @@ let
     core-security
     lambda
     core-data
+    nuage
   ];
   all = servers ++ [
     x2100
