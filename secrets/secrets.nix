@@ -49,6 +49,7 @@ in
   "git-gpg-private-key.age".publicKeys = servers ++ [
     x2100
     fischer
+    enigma
   ];
   "user-julien-password.age".publicKeys = all;
   "user-root-password.age".publicKeys = all;
