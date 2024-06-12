@@ -8,6 +8,7 @@ let
   core-data = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPAcIdJ3gr17bvDZ8NAcDBkEmOPTEhpg2yq3p1NNQB0f";
   lambda = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKluGTi+vGRLU2emYBhTJuEy7Qw0xq1e0Ey7wvU9xYHz";
   nuage = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEtPoZXJKPfSPGYb/H9eWL0tNSpAKM6V/AgeE1Uf2Is6";
+  enigma = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBgBNhXqFN79KUpmey44pag2FQYVulf1gYnRjdbvkzWW";
   servers = [
     gustave
     tower
@@ -20,6 +21,7 @@ let
   all = servers ++ [
     x2100
     fischer
+    enigma
   ];
 in
 {
